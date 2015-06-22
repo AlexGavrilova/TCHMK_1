@@ -5,9 +5,9 @@ int main(int argc, const char * argv[])
     if (argc < 5 || argc > 7)
     {
         printf("You must be enter more than 5 and fewer than 7 arguments. For example:\n");
-	printf("<file_a> <[ + | - | x | / | % | ^ ]> <file_b> <file_result> <file_module>\n");
+	printf("<file_a> <[ + | - | * | / | % | ^ ]> <file_b> <file_result> <file_module>\n");
 	printf("or:\n");
-	printf("<file_a> <[ + | - | x | / | % | ^ ]> <file_b> <file_result> <file_module> <-b>\n");
+	printf("<file_a> <[ + | - | * | / | % | ^ ]> <file_b> <file_result> <file_module> <-b>\n");
 	return 0;
     }
     int bin = 0;
@@ -86,7 +86,7 @@ int main(int argc, const char * argv[])
     FILE* Result_File = fopen(argv[4], "w");
     fclose(Result_File);
     const char* op = argv[2];
-    if ((strlen(op) > 1 || op[0] == '\0') || op[0] != '+' && op[0] != '-' && op[0] != 'x' && op[0] != '/' && op[0] != '%' && op[0] != '^')
+    if ((strlen(op) > 1 || op[0] == '\0') || op[0] != '+' && op[0] != '-' && op[0] != '*' && op[0] != '/' && op[0] != '%' && op[0] != '^')
     {
         printf("Bad operation: %s \n", op);
         return 0;
