@@ -721,14 +721,14 @@ struct LongNumber SmallDIV(struct LongNumber a, unsigned long long int b)
 		return res;
 }
 
-struct LongNumber Normalize(struct LongNumber a)
+/*struct LongNumber Normalize(struct LongNumber a)
 {
-//	unsigned int i = a.size-1;
+	unsigned int i = a.size-1;
 
-//	while ( (i>0) && (a.pointer[i]==0) ) 
-//		i--;
+	while ( (i>0) && (a.pointer[i]==0) ) 
+		i--;
 
-//	a.size = i+1;
+	a.size = i+1;
 
-//	return a;
-}
+	return a;
+} */
