@@ -115,7 +115,7 @@ int main(int argc, const char * argv[])
             result = SUB(a, b);
             break;
         }
-        case 'x':
+        case '*':
         {
             result = MUL(a, b);
             break;
